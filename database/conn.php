@@ -2,7 +2,7 @@
 
 $hostname= 'localhost';
 $database= 'to_do_list';
-$username = 'postgress';
+$username = 'postgres';
 $password = '1234';
 
 try {
