@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+    require_once('database/conn.php');
+
+    $tasks = [];
+
+    $sql = $pdo->query("SELECT * FROM task");
+
+    if ($sql->rowCount() >0 ) {
+        $tasks = $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,28 +32,35 @@
 
         <div id="task">
             <div class="task">
-                <input type="checkbox" name="progress" class="progress">
+                <?php foreach($tasks as $task): ?>
+                        <input
+                         type="checkbox" 
+                         name="progress" 
+                         class="progress"
+                         <?= $task['completed'] ? 'checked' : '' ?>
+                         >
 
-                <p class="task-description">
-                    Tema de Casa
-                </p>
+                        <p class="task-description">
+                            <?= $task['description'] ?>
+                        </p>
 
-                <div class="task-actions">
-                    <a class="action-button edit-button">
-                      <i class="fa-regular fa-pen-to-square"></i>  
+                        <div class="task-actions">
+                            <a class="action-button edit-button">
+                            <i class="fa-regular fa-pen-to-square"></i>  
 
-                    <a href="" class="action-button delete-button">
-                      <i class="fa-regular fa-trash-can"></i>  
-                    </a>
-                </div>
+                            <a href="" class="action-button delete-button">
+                            <i class="fa-regular fa-trash-can"></i>  
+                            </a>
+                        </div>
 
-                <form action="" class="to-do-form edit-task hidden">
-                    <input type="text" name="description" placeholder="Edit your task here">
-                   <button type="submit" class="form-button confirm button">
-                <i class="fa-solid fa-check"></i>
+                        <form action="" class="to-do-form edit-task hidden">
+                            <input type="text" name="description" placeholder="Edit your task here">
+                        <button type="submit" class="form-button confirm button">
+                        <i class="fa-solid fa-check"></i>
             </button>
                 </form>
             </div>
+            <?php endforeach  ?>
         </div>
 
     </div>
