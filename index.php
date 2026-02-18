@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="src/styles/syle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <title>To-do List</title>
+    <title>Listas de Tarefas</title>
 </head>
 <body>
     <div id="to_do">
-        <h1> Things to do</h1>
+        <h1>Listas de Tarefas</h1>
 
         <form action="actions/create.php" method="POST" class="to-do-form">
-            <input type="text" name = "description" placeholder="Write your task here" required>
+            <input type="text" name = "description" placeholder="Digite a sua Tarefa" required>
             <button type="submit" class="form-button">
                 <i class="fa-solid fa-plus"></i>
             </button>
