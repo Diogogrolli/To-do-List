@@ -48,8 +48,8 @@
                             <a class="action-button edit-button">
                             <i class="fa-regular fa-pen-to-square"></i>  
 
-                            <a href="" class="action-button delete-button">
-                            <i class="fa-regular fa-trash-can"></i>  
+                            <a href="actions/delete.php?id=<?= $task['id'] ?>" class="action-button delete-button">
+                            <i class="fa-regular fa-trash-can"></i>
                             </a>
                         </div>
 
