@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{  
+    font-family: "Embed code", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('../images/pc-background-icblvzjtn3i7m291.jpg');
+}
+
+#to_do {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: rgb(12, 11, 11);
+    padding: 18px;
+    border-radius: 8px;
+    width: 430px;
+}
+
+#to_do h1 {
+    color: #e5f9ff;;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.to-do-form {
+    display: flex;
+    width: 100%;
+}
+
+.to-do-form input {
+    background-color: transparent;
+    border: none;
+    color: #e5f9ff;
+    font-size: 15px;
+    width: 100%;
+    padding: 4px;
+    border-bottom: 2px solid #523539;
+}
+
+.to-do-form input:focus-visible {
+    outline: none;
+}
+
+.to-do-form .form-button {
+    border: none;
+    min-width: 40px;
+    min-height: 40px;
+    background-color:#523539 ;
+    border-radius: 100%;
+    font-size: 20px;
+}
+
+.to-do-form .form-button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #262626;
+    background-color: #191933;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.task .progress {
+    margin-right: 10px;
+}
+
+.task .task-description {
+    font-size: 16px;
+    color: #e5f9ff;
+    padding: 4px 0px;
+    width: 100%;
+}
+
+.task .task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    font-size: 16px;
+}
+
+.action-button.edit-button {
+    color: #6c9bbc;
+}
+
+.action-button.delete-button {
+    color: #f54235;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #to_do {
+        width: 300px;
+    }
+}
